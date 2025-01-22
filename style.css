@@ -12,3 +12,29 @@
 body {
     height: 100vh;
 }
+
+.grid-btn {
+    display: block;
+    margin: auto;
+    margin-top: 2%;
+    padding: 10px;
+}
+
+.container {
+    height: 100%;
+    display: flex;
+}
+
+.row {
+    flex: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.col {
+    flex: auto;
+}
+
+.hover:hover {
+    background-color: blue;
+}
