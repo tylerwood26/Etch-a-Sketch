@@ -46,7 +46,3 @@ function btnPressed() {
     checkUserInput(userInput);
     let nodeList = createGrid(userInput);
 }
-
-
-// if buttons pressed after grid made
-    // delete current grid and make new one
