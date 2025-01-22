@@ -10,10 +10,13 @@ function createGrid(number) {
             const colSquare = document.createElement("div");
             colSquare.classList.add("col");
             colSquare.classList.add("hover");
+            // add event listener here instead of ^?
             colSquare.textContent = "";
             rowSquare.appendChild(colSquare);
         }
     }
+    
+    // or add event listener here?
 
 }
 
@@ -40,9 +43,19 @@ function clearGrid() {
     }
 }
 
+function getRandomNumber() {
+    return Math.floor(Math.random() * 255);
+}
+
 function btnPressed() {
     clearGrid();
     let userInput = prompt("How big would you like the grid? (must be positive number below 100)");
     checkUserInput(userInput);
     let nodeList = createGrid(userInput);
 }
+
+// function to get random number between 0 and 255
+
+// add an onmouseover listener to each node
+
+// function that changes the node background to rgb with random number function
