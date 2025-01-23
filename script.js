@@ -9,14 +9,16 @@ function createGrid(number) {
         for (let j = 0; j < number; j++) {
             const colSquare = document.createElement("div");
             colSquare.classList.add("col");
-            colSquare.classList.add("hover");
-            // add event listener here instead of ^?
+            let red = getRandomNumber();
+            let green = getRandomNumber();
+            let blue = getRandomNumber();
+            colSquare.addEventListener("mouseover", (e) => {
+                e.target.style.cssText = `background-color: rgb(${red}, ${green}, ${blue});`;
+            })
             colSquare.textContent = "";
             rowSquare.appendChild(colSquare);
         }
     }
-    
-    // or add event listener here?
 
 }
 
@@ -53,8 +55,6 @@ function btnPressed() {
     checkUserInput(userInput);
     let nodeList = createGrid(userInput);
 }
-
-// function to get random number between 0 and 255
 
 // add an onmouseover listener to each node
 
