@@ -19,7 +19,6 @@ function createGrid(number) {
             rowSquare.appendChild(colSquare);
         }
     }
-
 }
 
 const btn = document.querySelector(".grid-btn");
