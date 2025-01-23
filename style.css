@@ -34,7 +34,3 @@ body {
 .col {
     flex: auto;
 }
-
-.hover:hover {
-    background-color: blue;
-}
