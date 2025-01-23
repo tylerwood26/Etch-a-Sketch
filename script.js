@@ -3,20 +3,16 @@ function createGrid(number) {
     for (let i = 0; i < number; i++) {
         const rowSquare = document.createElement("div");
         rowSquare.classList.add("row");
-        rowSquare.textContent = "";
         container.appendChild(rowSquare);
 
         for (let j = 0; j < number; j++) {
             const colSquare = document.createElement("div");
             colSquare.classList.add("col");
-            colSquare.addEventListener("mouseover", (e) => {
-                e.target.style.cssText = `background-color: black;`;
-            })
-            colSquare.textContent = "";
+            colSquare.addEventListener("mouseover", draw);
             rowSquare.appendChild(colSquare);
         }
     }
-
+    
 }
 
 const btn = document.querySelector(".grid-btn");
@@ -40,6 +36,10 @@ function clearGrid() {
             nodeList[i].remove();
         }
     }
+}
+
+function draw(e) {
+    e.target.style.cssText = `background-color: black;`;
 }
 
 function btnPressed() {
