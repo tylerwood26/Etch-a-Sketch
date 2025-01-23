@@ -3,19 +3,12 @@ function createGrid(number) {
     for (let i = 0; i < number; i++) {
         const rowSquare = document.createElement("div");
         rowSquare.classList.add("row");
-        rowSquare.textContent = "";
         container.appendChild(rowSquare);
 
         for (let j = 0; j < number; j++) {
             const colSquare = document.createElement("div");
             colSquare.classList.add("col");
-            let red = getRandomNumber();
-            let green = getRandomNumber();
-            let blue = getRandomNumber();
-            colSquare.addEventListener("mouseover", (e) => {
-                e.target.style.cssText = `background-color: rgb(${red}, ${green}, ${blue});`;
-            })
-            colSquare.textContent = "";
+            colSquare.addEventListener("mouseover",createRandomColor);
             rowSquare.appendChild(colSquare);
         }
     }
@@ -46,6 +39,13 @@ function clearGrid() {
 
 function getRandomNumber() {
     return Math.floor(Math.random() * 255);
+}
+
+function createRandomColor(e) {
+    let red = getRandomNumber();
+    let green = getRandomNumber();
+    let blue = getRandomNumber();
+    e.target.style.cssText = `background-color: rgb(${red}, ${green}, ${blue});`;
 }
 
 function btnPressed() {
