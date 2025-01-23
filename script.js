@@ -9,7 +9,9 @@ function createGrid(number) {
         for (let j = 0; j < number; j++) {
             const colSquare = document.createElement("div");
             colSquare.classList.add("col");
-            colSquare.classList.add("hover");
+            colSquare.addEventListener("mouseover", (e) => {
+                e.target.style.cssText = `background-color: black;`;
+            })
             colSquare.textContent = "";
             rowSquare.appendChild(colSquare);
         }
